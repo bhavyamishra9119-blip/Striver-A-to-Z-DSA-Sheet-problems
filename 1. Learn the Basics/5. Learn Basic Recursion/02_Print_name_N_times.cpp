@@ -1,7 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void name_N_times(string name, int count, int K)
+class Solution
+{
+    public:
+    void name_N_times(string name, int count, int K);
+};
+
+void Solution :: name_N_times(string name, int count, int K)
 {
     if (count == K)
     {
@@ -15,7 +21,9 @@ int main() {
     string name = "Adam";
     int K = 5;
 
-    name_N_times(name, 1, K);
+    Solution Sol;
+
+    Sol.name_N_times(name, 1, K);
 
     return 0;
 }
