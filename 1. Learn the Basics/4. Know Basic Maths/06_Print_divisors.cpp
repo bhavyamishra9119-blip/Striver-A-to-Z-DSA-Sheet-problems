@@ -1,24 +1,30 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void factor(int x)
+class Solution
 {
-    cout << "factors of " << x << " are ";
-
-    for (int i=1; i<x+1; i++)
+    public:
+    void factor(int n)
     {
-        if (x % i == 0)
+        cout << "factors of " << n << " are: ";
+
+        for (int i=1; i<n+1; i++)
         {
-            cout << i << " ";
+            if (n % i == 0)
+            {
+                cout << i << " ";
+            }
         }
     }
-}
+};
 
 int main() 
 {
     int x = 24;
 
-    factor(x);
+    Solution Sol;
+    
+    Sol.factor(x);
 
     return 0;
 }

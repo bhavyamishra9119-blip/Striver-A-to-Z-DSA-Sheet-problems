@@ -1,7 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int primeNo(int x)
+class Solution
+{
+    public:
+    int primeNo(int x);
+};
+
+int Solution :: primeNo(int x)
 {
     int count = 0;
 
@@ -27,7 +33,9 @@ int primeNo(int x)
 int main() 
 {
     int x = 41;
-    int func = primeNo(x);
+    Solution Sol;
+    
+    int func = Sol.primeNo(x);
 
     if (func == true)
     {

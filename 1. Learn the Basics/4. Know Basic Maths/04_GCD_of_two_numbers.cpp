@@ -1,7 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void factor_n1(int n1)
+class Solution
+{
+    public:
+    void factor_n1(int n1);
+    void factor_n2(int n2);
+    int GCD(int n1, int n2);
+};
+void Solution :: factor_n1(int n1)
 {
     cout << "factors of n1 are: ";
 
@@ -14,7 +21,7 @@ void factor_n1(int n1)
     }
 }
 
-void factor_n2(int n2)
+void Solution :: factor_n2(int n2)
 {
     cout << "factors of n2 are: ";
 
@@ -27,7 +34,7 @@ void factor_n2(int n2)
     }
 }
 
-int GCD(int n1, int n2)
+int Solution :: GCD(int n1, int n2)
 {
     cout << "GCD of " << n1 << " and " << n2 << " is ";
 
@@ -48,13 +55,15 @@ int main()
     int n1  = 12;
     int n2 = 24;
 
-    factor_n1(n1);
+    Solution Sol;
+
+    Sol.factor_n1(n1);
     cout << endl;
 
-    factor_n2(n2);
+    Sol.factor_n2(n2);
     cout << endl;
 
-    cout << GCD(n1, n2);
+    cout << Sol.GCD(n1, n2);
 
     return 0;
 }

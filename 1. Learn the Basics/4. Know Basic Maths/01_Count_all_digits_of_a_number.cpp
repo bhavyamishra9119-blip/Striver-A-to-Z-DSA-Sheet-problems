@@ -1,25 +1,29 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int count_digits(int n)
+class Solution
 {
-    int count = 0;
-
-    while (n>0)
+    public:
+    int count_digits(int n)
     {
-        count++;
-        n = n / 10;
+        int count = 0;
+        
+        while (n>0)
+        {
+            count++;
+            n = n / 10;
+        }
+        return count;
     }
-    return count;
-}
+};
 
 int main() 
 {
     int N = 12045;
     int n;
 
-    cout << count_digits(N);
-    
-    
+    Solution Sol;
+    cout << Sol.count_digits(N);
+
     return 0;
 }

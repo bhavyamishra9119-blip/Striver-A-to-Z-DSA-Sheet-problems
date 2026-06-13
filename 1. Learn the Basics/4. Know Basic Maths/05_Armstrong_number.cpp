@@ -1,25 +1,30 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool Armstrong_no(int n, int k, int N)
+class Solution
 {
-    int digit;
-    int sum = 0;
-
-    while (n>0)
+    public:
+    bool Armstrong_no(int n, int k, int N)
     {
-        digit = n % 10;
-        sum += pow(digit, k);
-        n = n / 10;
+        int digit;
+        int sum = 0;
+
+        while (n>0)
+        {
+            digit = n % 10;
+            sum += pow(digit, k);
+            n = n / 10;
+        }
+        return (sum == N);
     }
-    return (sum == N);
-}
+};
 
 int main() 
 {
     int N = 153;
     int k = to_string(N).length();
 
-    cout << Armstrong_no(N, k, N);
+    Solution Sol;
+    cout << Sol.Armstrong_no(N, k, N);
     return 0;
 }
