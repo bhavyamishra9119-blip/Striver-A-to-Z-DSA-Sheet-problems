@@ -13,7 +13,7 @@ class Solution
         return sum_N_nos(n, count + 1, sum += count);
     }
 };
-
+ 
 int main() {
     int n = 5;
 
