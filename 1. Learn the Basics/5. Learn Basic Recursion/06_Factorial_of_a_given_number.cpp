@@ -4,15 +4,13 @@ using namespace std;
 class Solution
 {
     public:
-    void factorial(int n)
+    int factorial(int n, int new_no, int k)
     {
-        int new_no = 1;
-
-        for (int i=n; i>=1; i--)
+        if (k > n)
         {
-            new_no *= i;
+            return new_no;
         }
-        cout << new_no;
+        return factorial(n, new_no *= k, k+1);
     }
 };
 
@@ -21,6 +19,8 @@ int main() {
      
     Solution Sol;
 
-    Sol.factorial(number);
+    int x = Sol.factorial(number, 1, 1);
+
+    cout << x;
     return 0;
 }
