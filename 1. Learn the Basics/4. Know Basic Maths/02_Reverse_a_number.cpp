@@ -17,6 +17,7 @@ class Solution
         return rev;
     }
 };
+
 int main() 
 {
     int N = 12345;
