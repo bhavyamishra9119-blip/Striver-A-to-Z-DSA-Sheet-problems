@@ -5,7 +5,8 @@ class Solution
 {
     public:
     void initialising(int n, int* Array);
-    void hashing(int n, int* Array);
+    void hashing(int n, int* Array, int* hashArray);
+    void query(int n, int* Array, int* hashArray);
 };
 
 void Solution :: initialising(int n, int* Array)
@@ -16,7 +17,7 @@ void Solution :: initialising(int n, int* Array)
         cin >> Array[i];
     }
 
-    cout << "The elements of the Array is: ";
+    cout << "The elements of the Array are: ";
 
     for (int i=0; i<n; i++)
     {
@@ -24,16 +25,35 @@ void Solution :: initialising(int n, int* Array)
     }
 }
 
-void Solution :: hashing(int n, int* Array)
+void Solution :: hashing(int n, int* Array, int* hashArray)
 {
-    int hashArray[100] = {0};
-
     for (int i=0; i<n; i++)
     {
         hashArray[Array[i]] += 1;
     }
 
-    cout << "The elements of the hashArray is: ";
+    cout << "The elements of the hashArray are: ";
+
+    for (int i=0; i<100; i++)
+    {
+        cout << hashArray[i] << " ";
+    }
+}
+
+void Solution :: query(int n, int* Array, int* hashArray)
+{
+    int q;
+    cout << "Enter the value of q: ";
+    cin >> q;
+
+    while (q--)
+    {
+    int number;
+    cout << "Enter the value of number: ";
+    cin >> number;
+
+    cout << number << " comes " << hashArray[number] << " times" << endl;
+    }
 }
 
 int main() 
@@ -43,11 +63,14 @@ int main()
     cin >> n;
 
     int Array[n];
+    int hashArray[100] = {0};
     
     Solution Sol;
     Sol.initialising(n, Array);
     cout << endl;
-    Sol.hashing(n, Array);
+    Sol.hashing(n, Array, hashArray);
+    cout << endl;
+    Sol.query(n, Array, hashArray);
 
     return 0;
 }
