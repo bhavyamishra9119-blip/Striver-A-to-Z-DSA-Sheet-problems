@@ -32,12 +32,12 @@ void Solution :: hashing(int n, int* Array, int* hashArray)
         hashArray[Array[i]] += 1;
     }
 
-    cout << "The elements of the hashArray are: ";
+    // cout << "The elements of the hashArray are: ";
 
-    for (int i=0; i<100; i++)
-    {
-        cout << hashArray[i] << " ";
-    }
+    // for (int i=0; i<100; i++)
+    // {
+    //     cout << hashArray[i] << " ";
+    // }
 }
 
 void Solution :: query(int n, int* Array, int* hashArray)
