@@ -4,13 +4,14 @@ using namespace std;
 class Solution 
 {
     public:
-    void initialise_array(vector<int>& Array, int n);
-    void selection_sort(vector<int>& Array, int n);
+    void initialising_array(vector<int>& Array, int size);
+    void selection_sort(vector<int>& Array, int size);
+    void printing_array(vector<int> Array, int size);
 };
 
-void Solution :: initialise_array(vector<int>& Array, int n)
+void Solution :: initialising_array(vector<int>& Array, int size)
 {
-    for (int i=0; i<n; i++)
+    for (int i=0; i<size; i++)
     {
         cout << "Element at " << i << " is: ";
         cin >> Array[i];
@@ -18,51 +19,44 @@ void Solution :: initialise_array(vector<int>& Array, int n)
 
     cout << "Elements of the array are: ";
 
-    for (int i=0; i<n; i++)
+    for (int i=0; i<size; i++)
     {
         cout << Array[i] << " ";
     }
 }
 
-void Solution :: selection_sort(vector<int>& Array, int n)
+void Solution :: selection_sort(vector<int>& Array, int size)
 {
-    if (n == 0)
+    int minEle = Array[0];
+
+    if (size == 0)
     {
         cout << "Invalid input by user";
     }
-
-    for (int i=0; i<n; i++)
+    for (int i=0; i<size; i++)
     {
-        int minEle = Array[i];
-
-        for (int j=i; j<n; j++)
-        {
-            if (minEle > Array[j])
-            {
-                minEle = Array[j];
-            }
-        }
+        
     }
+}
 
-    for (int i=0; i<n; i++)
-    {
-        cout << Array[i] << " ";
-    }
+void Solution :: printing_array(vector<int> Array, int size)
+{
+
 }
 
 int main()
 {
-    int n;
-    cout << "Enter the value of n: ";
-    cin >> n;
+    int size;
+    cout << "Enter the size of the array: ";
+    cin >> size;
 
-    vector<int> Array(n);
+    vector<int> Array(size);
 
     Solution Sol;
     
-    Sol.initialise_array(Array, n);
+    Sol.initialising_array(Array, size);
     cout << endl;
-    Sol.selection_sort(Array, n);
+    Sol.selection_sort(Array, size);
 
     return 0;
 }
