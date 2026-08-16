@@ -4,11 +4,11 @@ using namespace std;
 class Solution 
 {
     public:
-    void initialise(vector<int>& Array, int size);
-    void largestElement(vector<int>& Array, int size);
+    void initialising_array(vector<int>& Array, int size);
+    void largestElement(const vector<int>& Array, int size);
 };
 
-void Solution :: initialise(vector<int>& Array, int size)
+void Solution :: initialising_array(vector<int>& Array, int size)
 {
     for (int i=0; i<size; i++)
     {
@@ -16,7 +16,7 @@ void Solution :: initialise(vector<int>& Array, int size)
         cin >> Array[i];
     }
 }
-void Solution :: largestElement(vector<int>& Array, int size)
+void Solution :: largestElement(const vector<int>& Array, int size)
 {
     int maxEle = Array[0];
         
@@ -39,7 +39,7 @@ int main()
     vector<int> Array(size);
 
     Solution Sol;
-    Sol.initialise(Array, size);
+    Sol.initialising_array(Array, size);
     Sol.largestElement(Array, size);
     return 0;
 }

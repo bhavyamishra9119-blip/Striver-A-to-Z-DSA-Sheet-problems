@@ -37,6 +37,7 @@ void Solution :: sorting_array(vector<int>& Array, int size)
 
 void Solution :: printing_array(const vector<int>& Array, int size)
 {
+    cout << "The elements of the array are: ";
     for (int i=0; i<size; i++)
     {
         cout << Array[i] << " ";

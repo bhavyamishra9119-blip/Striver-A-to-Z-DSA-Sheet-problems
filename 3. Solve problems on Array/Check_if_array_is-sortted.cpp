@@ -6,8 +6,8 @@ class Solution
     public:
     void initialising_array(vector<int>& Array, int size);
     void sorting_array(vector<int>& Array, int size, bool& is_sorted_increasing, bool& is_sorted_decreasing);
-    void checking_array(vector<int>& Array, int size, bool is_sorted_increasing, bool is_sorted_decreasing);
-    void printing_array(vector<int>& Array, int size);
+    void checking_array(vector<int>& Array, int size, bool& is_sorted_increasing, bool& is_sorted_decreasing);
+    void printing_array(const vector<int>& Array, int size);
 };
 
 void Solution :: initialising_array(vector<int>& Array, int size)
@@ -38,7 +38,7 @@ void Solution :: sorting_array(vector<int>& Array, int size, bool& is_sorted_inc
     }
 }
 
-void Solution :: checking_array(vector<int>& Array, int size, bool is_sorted_increasing, bool is_sorted_decreasing)
+void Solution :: checking_array(vector<int>& Array, int size, bool& is_sorted_increasing, bool& is_sorted_decreasing)
 {
     if (is_sorted_increasing)
     {
@@ -54,7 +54,7 @@ void Solution :: checking_array(vector<int>& Array, int size, bool is_sorted_inc
     }
 }
 
-void Solution :: printing_array(vector<int>& Array, int size)
+void Solution :: printing_array(const vector<int>& Array, int size)
 {
     cout << "The elements of the array are: ";
 
