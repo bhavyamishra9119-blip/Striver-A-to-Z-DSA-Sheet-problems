@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
+int main() 
+{
     for (int i=4; i>=0; i--)
     {
         cout << endl;
