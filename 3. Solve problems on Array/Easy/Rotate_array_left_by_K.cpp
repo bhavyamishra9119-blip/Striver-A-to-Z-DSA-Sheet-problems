@@ -6,7 +6,7 @@ class Solution
     public:
     void initialising_original_array(vector<int>& original_array, int size);
     void rotating_original_array_by_k(vector<int>& original_array, int size);
-    void printing_original_array(vector<int>& original_array, int size);
+    void printing_array(const vector<int>& original_array, int size);
 };
 
 void Solution :: initialising_original_array(vector<int>& original_array, int size)
@@ -44,7 +44,7 @@ void Solution :: rotating_original_array_by_k(vector<int>& original_array, int s
     }
 }
 
-void Solution :: printing_original_array(vector<int>& original_array, int size)
+void Solution :: printing_array(const vector<int>& original_array, int size)
 {
     cout << "The elements of the original_array are: ";
 
@@ -66,7 +66,7 @@ int main()
 
     Sol.initialising_original_array(original_array, size);
     Sol.rotating_original_array_by_k(original_array, size);
-    Sol.printing_original_array(original_array, size);
+    Sol.printing_array(original_array, size);
     
     return 0;
 }

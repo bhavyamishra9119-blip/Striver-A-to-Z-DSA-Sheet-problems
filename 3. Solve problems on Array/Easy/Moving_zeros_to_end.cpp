@@ -6,7 +6,7 @@ class Solution
     public:
     void initialising_array(vector<int>& Array, int size);
     void moving_zeros_to_end_of_array(vector<int>& Array, vector<int> tempArray, int size);
-    void printing_array(vector<int>& Array, vector<int> tempArray, int size);
+    void printing_array(const vector<int>& Array, vector<int> tempArray, int size);
 };
 
 void Solution :: initialising_array(vector<int>& Array, int size)
@@ -30,7 +30,7 @@ void Solution::moving_zeros_to_end_of_array(vector<int>& Array, vector<int> temp
     }
 }
 
-void Solution :: printing_array(vector<int>& Array, vector<int> tempArray, int size)
+void Solution :: printing_array(const vector<int>& Array, vector<int> tempArray, int size)
 {
     for (int i=0; i<size; i++)
     {

@@ -6,7 +6,7 @@ class Solution
     public:
     void initialising_array(vector<int>& Array, int size);
     void arranging_zeros_at_last(vector<int>& Array, int size);
-    void printing_array(vector<int>& Array, int size);
+    void printing_array(const vector<int>& Array, int size);
 };
 
 void Solution :: initialising_array(vector<int>& Array, int size)
@@ -26,7 +26,7 @@ void Solution :: arranging_zeros_at_last(vector<int>& Array, int size)
     }
 }
 
-void Solution :: printing_array(vector<int>& Array, int size)
+void Solution :: printing_array(const vector<int>& Array, int size)
 {
     for (int i=0; i<size; i++)
     {
