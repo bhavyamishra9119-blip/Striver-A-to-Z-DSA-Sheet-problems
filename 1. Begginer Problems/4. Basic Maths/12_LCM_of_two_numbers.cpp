@@ -9,14 +9,15 @@ class Solution
 
 void Solution :: LCM_of_two_numbers(int num_1, int num_2)
 {
-    int x;
+    int x = 0;
     for (int i=1; i<=(num_1*num_2); i++)
     {
-        for (int j=0; j<=(num_1*num_2); j++)
+        for (int j=1; j<=(num_1*num_2); j++)
         {
-        if (num_1*i == x && num_2*j == x)
+        if (num_1*i == num_2*j)
         {
-            cout << "LCM of " << num_1 << " and " << num_2 << " is: " << x;
+            cout << "LCM of " << num_1 << " and " << num_2 << " is: " << num_2*j;
+            return;
         }
         }
     }
