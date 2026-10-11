@@ -4,12 +4,12 @@ using namespace std;
 class Solution 
 {
     public:
-    void initialising(int size, vector<int>& Array);
+    void initialising_array(int size, vector<int>& Array);
     void hashing(int size, vector<int>& Array, int* hashArray);
     void query(int size, vector<int>& Array, int* hashArray);
 };
 
-void Solution :: initialising(int size, vector<int>& Array)
+void Solution :: initialising_array(int size, vector<int>& Array)
 {   
     for (int i=0; i<size; i++)
     {
@@ -32,12 +32,12 @@ void Solution :: hashing(int size, vector<int>& Array, int* hashArray)
         hashArray[Array[i]] += 1;
     }
 
-    cout << "The elements of the hashArray are: ";
+    // cout << "The elements of the hashArray are: ";
 
-    for (int i=0; i<100; i++)
-    {
-        cout << hashArray[i] << " ";
-    }
+    // for (int i=0; i<100; i++)
+    // {
+    //     cout << hashArray[i] << " ";
+    // }
 }
 
 void Solution :: query(int size, vector<int>& Array, int* hashArray)
@@ -66,7 +66,7 @@ int main()
     int hashArray[100] = {0};
     
     Solution Sol;
-    Sol.initialising(size, Array);
+    Sol.initialising_array(size, Array);
     cout << endl;
     Sol.hashing(size, Array, hashArray);
     cout << endl;
