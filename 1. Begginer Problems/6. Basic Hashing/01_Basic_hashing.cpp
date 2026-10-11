@@ -4,14 +4,14 @@ using namespace std;
 class Solution 
 {
     public:
-    void initialising(int n, int* Array);
-    void hashing(int n, int* Array, int* hashArray);
-    void query(int n, int* Array, int* hashArray);
+    void initialising(int size, vector<int>& Array);
+    void hashing(int size, vector<int>& Array, int* hashArray);
+    void query(int size, vector<int>& Array, int* hashArray);
 };
 
-void Solution :: initialising(int n, int* Array)
+void Solution :: initialising(int size, vector<int>& Array)
 {   
-    for (int i=0; i<n; i++)
+    for (int i=0; i<size; i++)
     {
         cout << "Element at " << i << " is: ";
         cin >> Array[i];
@@ -19,28 +19,28 @@ void Solution :: initialising(int n, int* Array)
 
     cout << "The elements of the Array are: ";
 
-    for (int i=0; i<n; i++)
+    for (int i=0; i<size; i++)
     {
         cout << Array[i] << " ";
     }
 }
 
-void Solution :: hashing(int n, int* Array, int* hashArray)
+void Solution :: hashing(int size, vector<int>& Array, int* hashArray)
 {
-    for (int i=0; i<n; i++)
+    for (int i=0; i<size; i++)
     {
         hashArray[Array[i]] += 1;
     }
 
-    // cout << "The elements of the hashArray are: ";
+    cout << "The elements of the hashArray are: ";
 
-    // for (int i=0; i<100; i++)
-    // {
-    //     cout << hashArray[i] << " ";
-    // }
+    for (int i=0; i<100; i++)
+    {
+        cout << hashArray[i] << " ";
+    }
 }
 
-void Solution :: query(int n, int* Array, int* hashArray)
+void Solution :: query(int size, vector<int>& Array, int* hashArray)
 {
     int q;
     cout << "Enter the value of q: ";
@@ -58,19 +58,19 @@ void Solution :: query(int n, int* Array, int* hashArray)
 
 int main() 
 {
-    int n;
-    cout << "Enter the value of n: ";
-    cin >> n;
+    int size;
+    cout << "Enter the size of the array: ";
+    cin >> size;
 
-    int Array[n];
+    vector<int> Array(size);
     int hashArray[100] = {0};
     
     Solution Sol;
-    Sol.initialising(n, Array);
+    Sol.initialising(size, Array);
     cout << endl;
-    Sol.hashing(n, Array, hashArray);
+    Sol.hashing(size, Array, hashArray);
     cout << endl;
-    Sol.query(n, Array, hashArray);
+    Sol.query(size, Array, hashArray);
 
     return 0;
 }

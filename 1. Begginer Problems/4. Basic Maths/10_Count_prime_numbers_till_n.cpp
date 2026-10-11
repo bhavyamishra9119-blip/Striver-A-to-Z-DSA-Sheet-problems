@@ -4,32 +4,34 @@ using namespace std;
 class Solution
 {
     public:
-    void prime_factors(int number);
+    void factors_of_number(int number, vector<int>& factors);
+    void prime_factors_of_number(int number, vector<int>& factors);
 };
 
-void Solution :: prime_factors(int number)
+void Solution :: factors_of_number(int number, vector<int>& factors)
 {
-    int count = 0;
     for (int i=2; i<number; i++)
     {
         if (number % i == 0)
         {
-            for (int j=1; j<=i; j++)
-            {
-                if (i % j == 0)
-                {
-                    count++;
-                    if (count > 2)
-                    {
-                        cout << number << " is not a prime number";
-                    }
-                    else 
-                    {
-                        cout << number << " is a prime number";
-                    }
-                }
-            }
+            factors[i] = i;
         }
+    }
+}
+
+void Solution :: prime_factors_of_number(int number, vector<int>& factors)
+{
+    int count = 0;
+    for (int i=1; i<number; i++)
+    {
+        if (factors[i] % i == 0)
+        {
+            count++;
+        }
+    }
+    if (count > 2)
+    {
+        
     }
 }
 
@@ -39,7 +41,10 @@ int main()
     cout << "Enter the value of the number: ";
     cin >> number;
 
+    vector<int> factors;
+
     Solution Sol;
-    Sol.prime_factors(number);
+    Sol.factors_of_number(number, factors);
+    
     return 0;
 }
