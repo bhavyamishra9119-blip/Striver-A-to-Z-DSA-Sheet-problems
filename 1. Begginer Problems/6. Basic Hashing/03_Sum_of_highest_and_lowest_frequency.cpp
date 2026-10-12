@@ -43,5 +43,9 @@ int main()
     vector<int> Array(size);
     int hashArray[100] = {0};
 
+    Solution Sol;
+    Sol.initialising_array(Array, hashArray, size);
+    Sol.initialising_array(Array, hashArray, size);
+    
     return 0;
 }
