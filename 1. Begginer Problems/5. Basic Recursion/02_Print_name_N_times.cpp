@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 class Solution
@@ -17,9 +17,15 @@ void Solution :: name_N_times(string name, int count, int K)
     name_N_times(name, count + 1, K);
 }
 
-int main() {
-    string name = "Adam";
-    int K = 5;
+int main() 
+{
+    string name;
+    cout << "Enter the name: ";
+    getline(cin, name);
+
+    int K;
+    cout << "Enter the value of K: ";
+    cin >> K;
 
     Solution Sol;
 

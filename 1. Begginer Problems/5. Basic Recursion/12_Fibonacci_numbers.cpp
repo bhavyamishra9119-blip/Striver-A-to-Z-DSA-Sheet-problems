@@ -1,11 +1,14 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 class Solution
 {
     public:
-    void fibonacci(int n)
-    {
+    void fibonacci(int n);
+};
+
+void Solution :: fibonacci(int n)
+{
     if (n == 0) 
     {
         cout << "The Fibonacci Series up to " << n << "th term:" << endl;
@@ -29,11 +32,12 @@ class Solution
         }
     }
 }
-};
 
 int main() 
 {
-    int n = 7;
+    int n;
+    cout << "Enter the value of n: ";
+    cin >> n;
 
     Solution Sol;
     Sol.fibonacci(n);

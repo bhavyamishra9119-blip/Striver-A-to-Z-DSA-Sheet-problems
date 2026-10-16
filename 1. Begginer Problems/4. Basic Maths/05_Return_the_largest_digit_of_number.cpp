@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 class Solution
@@ -47,7 +48,6 @@ int main()
     int saved_number = original_number;
 
     Solution Sol;
-
     Sol.return_the_largest_digit(number, original_number, saved_number);
 
     return 0;

@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 class Solution
@@ -33,8 +33,8 @@ int Solution :: primeNo(int x)
 int main() 
 {
     int x = 41;
-    Solution Sol;
     
+    Solution Sol;
     int func = Sol.primeNo(x);
 
     if (func == true)

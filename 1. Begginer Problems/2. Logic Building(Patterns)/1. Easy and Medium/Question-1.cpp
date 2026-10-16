@@ -1,9 +1,11 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 int main() 
 {
-    string x = "*";
+    string s;
+    cout << "Enter the string: ";
+    getline(cin, s);
 
     for (int i=1; i<5; i++)
     {
@@ -11,7 +13,7 @@ int main()
 
         for (int j = 1; j<6; j++)
         {
-            cout << "*";
+            cout << s << " ";
         }
     }
     return 0;

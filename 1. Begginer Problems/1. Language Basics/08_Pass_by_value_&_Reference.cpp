@@ -1,35 +1,45 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
-class Solution{
-public:
-    void originalArray(vector<int> Array)
-    {
-        for (int i = 0; i < Array.size(); i++)
-        {
-            cout << Array[i] << " ";
-        }
-    }
-    void reverse(vector<int>& Array)
-    {      
-        cout << "Reversed Array is: ";
-        for (int i = Array.size() - 1; i > -1; i--)
-        {
-            cout << Array[i] << " ";
-        }
-    }
+class Solution
+{
+    public:
+    void original_array(vector<int> Array);
+    void reversed_array(vector<int>& Array);
 };
 
-int main() {
-    vector<int> Array = {1,2,3,4,5,6};
+void Solution :: original_array(vector<int> Array)
+{
+    for (int i = 0; i < Array.size(); i++)
+    {
+        cout << Array[i] << " ";
+    }
+}
 
-    Solution Sol;
+void Solution :: reversed_array(vector<int>& Array)
+{      
+    cout << "Reversed_arrayd Array is: ";
+    for (int i = Array.size() - 1; i > -1; i--)
+    {
+        cout << Array[i] << " ";
+    }
+}
+
+int main() 
+{
+    int size;
+    cout << "Enter the size of the array: ";
+    cin >> size;
+
+    vector<int> Array(size);
 
     cout << "Original Array is: ";
-    Sol.originalArray(Array);
-    cout << endl;
 
-    Sol.reverse(Array);
+    Solution Sol;
+    Sol.original_array(Array);
+    cout << endl;
+    Sol.reversed_array(Array);
     
     return 0;
 }

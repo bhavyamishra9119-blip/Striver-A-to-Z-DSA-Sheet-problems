@@ -1,30 +1,35 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
 using namespace std;
 
 class Solution
 {
     public:
-    void N_time(string x, int count, int K)
-    {
-        if (count == K)
-        {
-            return;
-        }
-        
-        cout << x << endl;
-        N_time(x, count + 1, K);
-    }
+    void N_time(string s, int count, int K);
 };
 
+void Solution :: N_time(string s, int count, int K)
+{
+    if (count == K)
+    {
+        return;
+    }
+    cout << s << endl;
+    N_time(s, count + 1, K);
+}
 
 int main() 
 {
-    string x = "Horse";
-    int K = 5;
+    string s;
+    cout << "Enter the string: ";
+    getline(cin, s);
+
+    int K;
+    cout << "Enter the value of K: ";
+    cin >> K;
 
     Solution Sol;
-
-    Sol.N_time(x, 0, K);
+   Sol.N_time(s, 0, K);
 
     return 0;
 }

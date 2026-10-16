@@ -1,28 +1,39 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
     
 class Solution
 {
     public:
-    bool palindrome_no(int n, int temp)
-    {
-        int rev = 0;
-        
-        while (n>0)
-        {
-            int last_digit = n % 10;
-            rev = rev * 10 + last_digit;
-            n = n / 10;
-        }
-        return temp == rev;
-    }
+    void palindrome_number(int n, int number);
 };
+
+void Solution :: palindrome_number(int n, int number)
+{
+    int rev = 0;
+    while (n>0)
+    {
+        int last_digit = n % 10;
+        rev = rev * 10 + last_digit;
+        n = n / 10;
+    }
+    if (rev == number)
+    {
+        cout << number << " is palindrome";
+    }
+    else
+    {
+        cout << number << " is not palindrome";
+    }
+}
 
 int main() 
 {
-    int Number = 1221;
+    int number; 
+    cout << "Enter the number: ";
+    cin >> number;
 
     Solution Sol;
-    cout << Sol.palindrome_no(Number, Number);
+    Sol.palindrome_number(number, number);
+    
     return 0;
 }

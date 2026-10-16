@@ -1,29 +1,33 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 class Solution
 {
     public:
-    int reverse_no(int n)
-    {
-        int rev = 0;
-        
-        while (n>0)
-        {
-            int last_digit = n % 10;
-            rev = rev * 10 + last_digit;
-            n = n / 10;
-        }
-        return rev;
-    }
+    void reverse_number(int number);
 };
+
+void Solution :: reverse_number(int number)
+{
+    cout << "Original number is: " << number;
+    int rev = 0;      
+    while (number>0)    
+    {
+        int last_digit = number % 10;
+        rev = rev * 10 + last_digit;
+        number = number / 10;
+    }
+    cout << "\nReversed number is: " << rev;
+}
 
 int main() 
 {
-    int N = 12345;
+    int number;
+    cout << "Enter the number: ";
+    cin >> number;
 
     Solution Sol;
-    cout << Sol.reverse_no(N);
+    Sol.reverse_number(number);
     
     return 0;
 }

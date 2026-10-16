@@ -1,19 +1,21 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 class Solution
 {
     public:
-    void print_To_N(int n, int count)
-    {
-        if (count == 0)
-        {
-            return;
-        }
-        cout << count << " ";
-        print_To_N(n, count - 1);
-    }
+    void print_To_N(int n, int count);
 };
+
+void Solution :: print_To_N(int n, int count)
+{
+    if (count == 0)
+    {
+        return;
+    }
+    cout << count << " ";
+    print_To_N(n, count - 1);
+}
 
 int main() 
 {

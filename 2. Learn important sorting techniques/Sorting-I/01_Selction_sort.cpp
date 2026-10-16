@@ -6,7 +6,7 @@ class Solution
     public:
     void initialising_array(vector<int>& Array, int size);
     void selection_sort(vector<int>& Array, int size);
-    void printing_array(vector<int> Array, int size);
+    void printing_array(const vector<int>& Array, int size);
 };
 
 void Solution :: initialising_array(vector<int>& Array, int size)
@@ -39,7 +39,7 @@ void Solution :: selection_sort(vector<int>& Array, int size)
     }
 }
 
-void Solution :: printing_array(vector<int> Array, int size)
+void Solution :: printing_array(const vector<int>& Array, int size)
 {
 
 }

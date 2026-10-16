@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 class Solution
@@ -42,7 +43,6 @@ int main()
     vector<int> Array(size);
 
     Solution Sol;
-
     Sol.initialising_array(Array, size);
     Sol.highest_occuring_element(Array, size);
 

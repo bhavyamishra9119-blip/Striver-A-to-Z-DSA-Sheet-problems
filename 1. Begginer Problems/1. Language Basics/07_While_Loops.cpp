@@ -1,28 +1,30 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 class Solution 
 {
     public:
-    int whileLoop(int d) 
-    {
-        int sum = 0;
-        int count = 0;
-        int num = d;
-        
-        while(count < 50)
-        {
-            sum += num;
-            num += 10;
-            count++;
-        }
-        return sum;
-    }
+    int whileLoop(int d);
 };
 
-int main() {
-    int d;
+int Solution :: whileLoop(int d)
+{
+    int sum = 0;
+    int count = 0;
+    int num = d;
+        
+    while(count < 50)
+    {
+        sum += num;
+        num += 10;
+        count++;
+    }
+    return sum;
+}
 
+int main() 
+{
+    int d;
     cout << "Enter the value of d here: ";
     cin >> d;
 

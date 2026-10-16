@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 class Solution
@@ -41,8 +41,8 @@ int main()
     cin >> original_number;
 
     int count = 0;
+    
     Solution Sol;
-
     Sol.separating_number(original_number);
     return 0;
 }

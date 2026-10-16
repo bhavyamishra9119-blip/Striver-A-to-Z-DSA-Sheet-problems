@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 class Solution
@@ -6,7 +7,7 @@ class Solution
     public:
     void initialising_array(vector<string>& Array, int size);
     void reversing_string(vector<string>& Array, int size);
-    void printing_array(vector<string> Array, int size);
+    void printing_array(const vector<string>& Array, int size);
 };
 
 void Solution :: initialising_array(vector<string>& Array, int size)
@@ -26,7 +27,7 @@ void Solution :: reversing_string(vector<string>& Array, int size)
     }
 }
 
-void Solution :: printing_array(vector<string> Array, int size)
+void Solution :: printing_array(const vector<string>& Array, int size)
 {
     cout << "Reversed string is: ";
     for (int i=0; i<size; i++)
