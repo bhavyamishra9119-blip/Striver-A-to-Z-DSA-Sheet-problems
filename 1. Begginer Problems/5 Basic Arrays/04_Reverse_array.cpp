@@ -22,10 +22,17 @@ void Solution :: initialising_array(vector<int>& Array, int size)
 
 void Solution :: Original_array(vector<int>& Array, int size)
 {
-    cout << "Original array is: ";
+    cout << "Original array is: [";
     for (int i=0; i<size; i++)
     {
-        cout << Array[i] << " ";
+        if (i < (size-1))
+        {
+            cout << Array[i] << ",";
+        }
+        else
+        {
+            cout << Array[i] << "]";
+        }
     }
 }
 
@@ -42,7 +49,14 @@ void Solution :: printing_array(vector<int>& Array, int size)
     cout << "Reversed array is: ";
     for (int i=0; i<size; i++)
     {
-        cout << Array[i] << " ";
+        if (i < (size-1))
+        {
+        cout << Array[i] << ",";
+        }
+        else
+        {
+            cout << Array[i] << "]";
+        }
     }
 }
 
