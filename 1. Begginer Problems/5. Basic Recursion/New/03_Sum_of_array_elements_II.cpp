@@ -11,6 +11,7 @@ class Solution
 
 void Solution :: initialising_array(vector<int>& Array, int size)
 {
+    // Initialising array
     for (int i=0; i<size; i++)
     {
         cout << "Element present at " << i << " is: ";
@@ -20,6 +21,7 @@ void Solution :: initialising_array(vector<int>& Array, int size)
 
 void Solution :: sum_of_elements(vector<int> Array, int size)
 {
+    // Adding elements of array
     int sum =0;
     for (int i=0; i<size; i++)
     {

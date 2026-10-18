@@ -4,17 +4,18 @@ using namespace std;
 class Solution
 {
     public:
-    void print_To_N(int n, int count);
+    void printing_to_1(int n, int count);
 };
 
-void Solution :: print_To_N(int n, int count)
+void Solution :: printing_to_1(int n, int count)
 {
+    // Printing from N to 1
     if (count == 0)
     {
         return;
     }
     cout << count << " ";
-    print_To_N(n, count - 1);
+    printing_to_1(n, count - 1);
 }
 
 int main() 
@@ -23,6 +24,6 @@ int main()
 
     Solution Sol;
 
-    Sol.print_To_N(n, n);
+    Sol.printing_to_1(n, n);
     return 0;
 }

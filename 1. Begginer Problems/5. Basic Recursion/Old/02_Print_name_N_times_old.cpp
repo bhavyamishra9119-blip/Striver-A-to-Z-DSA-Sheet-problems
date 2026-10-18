@@ -9,6 +9,7 @@ class Solution
 
 void Solution :: name_N_times(string name, int count, int K)
 {
+    
     if (count == K)
     {
         return;

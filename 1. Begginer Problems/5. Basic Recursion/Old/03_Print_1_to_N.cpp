@@ -9,6 +9,7 @@ class Solution
 
 void Solution :: print_To_N(int n, int count)
 {
+    // Printing 1 to N
     if (count > n)
     {
         return;

@@ -10,6 +10,7 @@ class Solution
 
 void Solution :: N_time(string s, int count, int K)
 {
+    // Printing string N times
     if (count == K)
     {
         return;

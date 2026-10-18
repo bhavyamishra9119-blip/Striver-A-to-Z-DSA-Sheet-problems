@@ -9,6 +9,7 @@ class Solution
 
 int Solution :: sum_N_nos(int n, int count, int sum)
 {
+    // Sum of N nos
     if (count > n)
     {
         return sum;

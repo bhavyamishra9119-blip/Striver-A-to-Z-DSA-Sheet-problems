@@ -8,10 +8,12 @@ class Solution
     void initialising_array(vector<int>&Array, int size);
     void original_array(vector<int> Array, int size);
     void reversed_array(vector<int>& Array, int size);
+    void printing_array(const vector<int>& Array, int size);
 };
 
 void Solution :: initialising_array(vector<int>&Array, int size)
 {
+    // Initialising arry
     for (int i=0; i<size; i++)
     {
         cout << "Element present at " << i << " is: ";
@@ -21,6 +23,7 @@ void Solution :: initialising_array(vector<int>&Array, int size)
 
 void Solution :: original_array(vector<int> Array, int size)
 {
+    // Printing original array
     cout << "Original array is: ";
     for (int i=0; i<size; i++)
     {
@@ -30,6 +33,7 @@ void Solution :: original_array(vector<int> Array, int size)
 
 void Solution :: reversed_array(vector<int>& Array, int size)
 {
+    // Reversing array
     int p1 = 0;
     int p2 = size - 1;
 
@@ -39,15 +43,18 @@ void Solution :: reversed_array(vector<int>& Array, int size)
         p1++;
         p2--;
     }
+}
 
-    cout << "Reversed array is: ";
+void Solution :: printing_array(const vector<int>& Array, int size)
+{
+    // Printing reversed array
+    cout << "\nReversed array is: ";
 
     for (int i=0; i<size; i++)
     {
         cout << Array[i] << " ";
     }
 }
-
 int main() 
 {
     Solution Sol;
@@ -58,15 +65,10 @@ int main()
 
     vector<int> Array(size);
 
-
     Sol.initialising_array(Array, size);
     Sol.original_array(Array, size);
     Sol.reversed_array(Array, size);
-
-    for (int num : Array)
-    {
-        cout << num << " ";
-    }
+    Sol.printing_array(Array, size);
 
     return 0;
 }

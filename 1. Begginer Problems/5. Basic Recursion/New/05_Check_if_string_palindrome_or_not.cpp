@@ -11,6 +11,7 @@ class Solution
 
 void Solution :: reverse_s(string& s, int size) 
 {
+    // Reversing string
     int p1 = 0;
     int p2 = size - 1;
 
@@ -24,6 +25,7 @@ void Solution :: reverse_s(string& s, int size)
 
 bool Solution :: palindrome(string s, int size)
 {
+    // Checking palindrome or not
     string original = s;
     reverse_s(s, size); 
         
