@@ -1,74 +1,80 @@
 #include <iostream>
 #include <vector>
-using namespace std; 
+using namespace std;
 
-class Solution 
+class Solution
 {
     public:
-    void initialising_array(vector<int>&Array, int size);
-    void original_array(vector<int> Array, int size);
-    void reversed_array(vector<int>& Array, int size);
-    void printing_array(const vector<int>& Array, int size);
+    void initialising_array(vector<int>& Array, int size);
+    void Original_array(vector<int>& Array, int size);
+    void reversing_array(vector<int>& Array, int size);
+    void printing_array(vector<int>& Array, int size);
 };
 
-void Solution :: initialising_array(vector<int>&Array, int size)
+void Solution :: initialising_array(vector<int>& Array, int size)
 {
-    // Initialising arry
     for (int i=0; i<size; i++)
     {
-        cout << "Element present at " << i << " is: ";
+        cout << "The element at " << i << "th position is: ";
         cin >> Array[i];
     }
 }
 
-void Solution :: original_array(vector<int> Array, int size)
+void Solution :: Original_array(vector<int>& Array, int size)
 {
-    // Printing original array
-    cout << "Original array is: ";
+    cout << "Original array is: [";
     for (int i=0; i<size; i++)
     {
-        cout << Array[i] << " ";
+        if (i < (size-1))
+        {
+            cout << Array[i] << ",";
+        }
+        else
+        {
+            cout << Array[i] << "]";
+        }
     }
 }
 
-void Solution :: reversed_array(vector<int>& Array, int size)
+void Solution :: reversing_array(vector<int>& Array, int size)
 {
-    // Reversing array
-    int p1 = 0;
-    int p2 = size - 1;
-
-    while (p1 < p2)
+    for (int i=0; i<(size/2); i++)
     {
-        swap(Array[p1], Array[p2]);
-        p1++;
-        p2--;
+        swap(Array[i], Array[size-i-1]);
     }
 }
 
-void Solution :: printing_array(const vector<int>& Array, int size)
+void Solution :: printing_array(vector<int>& Array, int size)
 {
-    // Printing reversed array
-    cout << "\nReversed array is: ";
-
+    cout << "Reversed array is: ";
     for (int i=0; i<size; i++)
     {
-        cout << Array[i] << " ";
+        if (i < (size-1))
+        {
+        cout << Array[i] << ",";
+        }
+        else
+        {
+            cout << Array[i] << "]";
+        }
     }
 }
-int main() 
-{
-    Solution Sol;
 
+int main()
+{
     int size;
     cout << "Enter the size of the array: ";
     cin >> size;
 
     vector<int> Array(size);
 
+    Solution Sol;
+   
     Sol.initialising_array(Array, size);
-    Sol.original_array(Array, size);
-    Sol.reversed_array(Array, size);
+    Sol.Original_array(Array, size);
+    cout << endl;
+    Sol.reversing_array(Array, size);
     Sol.printing_array(Array, size);
 
     return 0;
-}
+}        
