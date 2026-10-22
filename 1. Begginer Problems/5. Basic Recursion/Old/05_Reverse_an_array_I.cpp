@@ -8,7 +8,7 @@ class Solution
     void initialising_array(vector<int>& Array, int size);
     void Original_array(vector<int>& Array, int size);
     void reversing_array(vector<int>& Array, int size);
-    void printing_array(vector<int>& Array, int size);
+    void printing_array(const vector<int>& Array, int size);
 };
 
 void Solution :: initialising_array(vector<int>& Array, int size)
@@ -44,9 +44,9 @@ void Solution :: reversing_array(vector<int>& Array, int size)
     }
 }
 
-void Solution :: printing_array(vector<int>& Array, int size)
+void Solution :: printing_array(const vector<int>& Array, int size)
 {
-    cout << "Reversed array is: ";
+    cout << "Reversed array is: [";
     for (int i=0; i<size; i++)
     {
         if (i < (size-1))

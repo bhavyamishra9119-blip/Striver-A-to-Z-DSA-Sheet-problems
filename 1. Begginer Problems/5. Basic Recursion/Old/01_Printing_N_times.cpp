@@ -30,7 +30,7 @@ int main()
     cin >> K;
 
     Solution Sol;
-   Sol.N_time(s, 0, K);
+    Sol.N_time(s, 0, K);
 
     return 0;
 }
