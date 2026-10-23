@@ -42,7 +42,7 @@ void Solution :: selection_sort(vector<int>& Array, int size)
 
 void Solution :: printing_array(const vector<int>& Array, int size)
 {
-    cout << "The elements of the array are: ";
+    cout << "\nThe elements of the array are: ";
     for (int i=0; i<size; i++)
     {
         cout << Array[i] << " ";
@@ -60,7 +60,6 @@ int main()
     Solution Sol;
     
     Sol.initialising_array(Array, size);
-    cout << endl;
     Sol.selection_sort(Array, size);
     Sol.printing_array(Array, size);
 
