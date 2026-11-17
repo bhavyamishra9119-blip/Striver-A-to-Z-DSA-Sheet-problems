@@ -1,10 +1,12 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 class Solution 
 {
     public:
     void initialising_array(vector<int>& Array, int size);
+    void printing_array(const vector<int>& Array,int size);
     void largestElement(const vector<int>& Array, int size);
 };
 
@@ -16,6 +18,16 @@ void Solution :: initialising_array(vector<int>& Array, int size)
         cin >> Array[i];
     }
 }
+
+void Solution :: printing_array(const vector<int>& Array,int size)
+{
+    cout << "Element of the array are: ";
+    for (int i=0; i<size; i++)
+    {
+        cout << Array[i] << " ";
+    }
+}
+
 void Solution :: largestElement(const vector<int>& Array, int size)
 {
     int maxEle = Array[0];
@@ -40,6 +52,8 @@ int main()
 
     Solution Sol;
     Sol.initialising_array(Array, size);
+    Sol.printing_array(Array, size);
+    cout << endl;
     Sol.largestElement(Array, size);
     return 0;
 }
