@@ -5,6 +5,7 @@ class Solution
 {
     public:
     void initialising_array(vector<int>& Array, int size);
+    void printing_array(const vector<int>& Array,int size);
     void linear_search(vector<int>& Array, int size);
 };
 
@@ -14,6 +15,15 @@ void Solution :: initialising_array(vector<int>& Array, int size)
     {
         cout << "Element present at " << i << " is: ";
         cin >> Array[i];
+    }
+}
+
+void Solution :: printing_array(const vector<int>& Array,int size)
+{
+    cout << "Element of the array are: ";
+    for (int i=0; i<size; i++)
+    {
+        cout << Array[i] << " ";
     }
 }
 
@@ -27,7 +37,7 @@ void Solution :: linear_search(vector<int>& Array, int size)
     {
         if (Array[i] == number)
         {
-            cout << i;
+            cout << number << " is present at " << i << " th index in the array";
             return;
         }
     }
@@ -45,6 +55,8 @@ int main()
     Solution Sol;
 
     Sol.initialising_array(Array, size);
+    Sol.printing_array(Array, size);
+    cout << endl;
     Sol.linear_search(Array, size);
     return 0;
 }
