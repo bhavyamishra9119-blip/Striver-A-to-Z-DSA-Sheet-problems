@@ -10,7 +10,7 @@ class Solution
 };
 
 void Solution :: initialising_array(vector<int>& Array, int size)
-{
+{ 
     for (int i=0; i<size; i++)
     {
         cout << "Element present at " << i << " is: ";
