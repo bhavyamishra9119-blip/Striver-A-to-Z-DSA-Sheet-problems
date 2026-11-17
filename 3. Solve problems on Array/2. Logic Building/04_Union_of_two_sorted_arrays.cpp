@@ -5,7 +5,7 @@ class Solution
 {
     public:
     void initialising_array(vector<int>& Array_1, vector<int>& Array_2, int size_1, int size_2);
-    void sorting_array(vector<int>& Array_1, vector<int>& Array_2, int size_1, int size_2);
+    void sorting_array(vector<int>& Array_1, vector<int>& Array_2, int size_1, int size_2); 
     void union_of_two_sorted_arrays(vector<int>& Array_1, vector<int>& Array_2, vector<int>& Array, int size_1, int size_2);
     void removing_duplicates_from_array(vector<int>& Array, int& size);
     void printing_array(const vector<int>& Array, int size);
