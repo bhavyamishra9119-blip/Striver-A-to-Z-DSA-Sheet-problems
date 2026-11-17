@@ -1,12 +1,14 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 class Solution
 {
     public:
     void initialising_array(vector<int>& Array, int size);
+    void printing_original_array(const vector<int>& Array, int size);
     void rotating_array_by_1(vector<int>& Array, int size);
-    void printing_array(const vector<int>& Array, int size);
+    void printing_modified_array(const vector<int>& Array, int size);
 };
 
 void Solution :: initialising_array(vector<int>& Array, int size)
@@ -15,6 +17,15 @@ void Solution :: initialising_array(vector<int>& Array, int size)
     {
         cout << "Element present at " << i << " is: ";
         cin >> Array[i];
+    }
+}
+
+void Solution :: printing_original_array(const vector<int>& Array, int size)
+{
+    cout << "Elements of the array after rotating: ";
+    for (int i=0; i<size; i++)
+    {
+        cout << Array[i] << " ";
     }
 }
 
@@ -29,8 +40,9 @@ void Solution :: rotating_array_by_1(vector<int>& Array, int size)
     Array[size-1] = temp;
 }
 
-void Solution :: printing_array(const vector<int>& Array, int size)
+void Solution :: printing_modified_array(const vector<int>& Array, int size)
 {
+    cout << "Elements of the array before rotating: ";
     for (int i=0; i<size; i++)
     {
         cout << Array[i] << " ";
@@ -48,8 +60,9 @@ int main()
     Solution Sol;
 
     Sol.initialising_array(Array, size);
+    Sol.printing_original_array(Array, size);
     Sol.rotating_array_by_1(Array, size);
-    Sol.printing_array(Array, size);
+    Sol.printing_modified_array(Array, size);
 
     return 0;
 }
