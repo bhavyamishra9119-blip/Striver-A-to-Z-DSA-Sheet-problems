@@ -8,7 +8,7 @@ class Solution
     void sorting_array(vector<int>& Array_1, vector<int>& Array_2, int size_1, int size_2);
     void union_of_two_sorted_arrays(vector<int>& Array_1, vector<int>& Array_2, vector<int>& Array, int size_1, int size_2);
     void removing_duplicates_from_array(vector<int>& Array, int& size);
-    void printing_array(vector<int>& Array, int size);
+    void printing_array(const vector<int>& Array, int size);
 };
 
 void Solution :: initialising_array(vector<int>& Array_1, vector<int>& Array_2, int size_1, int size_2)
@@ -89,7 +89,7 @@ void Solution :: removing_duplicates_from_array(vector<int>& Array, int& size)
     size = uniqueIndex; 
 }
 
-void Solution :: printing_array(vector<int>& Array, int size)
+void Solution :: printing_array(const vector<int>& Array, int size)
 {
     for (int i=0; i<size; i++)
     {
